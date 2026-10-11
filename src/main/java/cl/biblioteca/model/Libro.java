@@ -1,5 +1,9 @@
 package cl.biblioteca.model;
 
+/**
+ * Libro del catálogo de la biblioteca.
+ * Guarda sus datos bibliográficos, el stock disponible y su categoría.
+ */
 public class Libro {
     private int idLibro;
     private String titulo;

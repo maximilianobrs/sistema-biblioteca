@@ -1,5 +1,8 @@
 package cl.biblioteca.model;
 
+/**
+ * Categoría a la que pertenece un libro.
+ */
 public class Categoria {
     private int idCategoria;
     private String nombreCategoria;

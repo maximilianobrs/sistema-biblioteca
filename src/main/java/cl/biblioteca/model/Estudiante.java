@@ -1,5 +1,9 @@
 package cl.biblioteca.model;
 
+/**
+ * Estudiante que puede solicitar préstamos de libros.
+ * Hereda los datos básicos de {@link Persona} y agrega el curso.
+ */
 public class Estudiante extends Persona{
     private String curso;
 

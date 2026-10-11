@@ -2,6 +2,10 @@ package cl.biblioteca.model;
 
 import java.time.LocalDate;
 
+/**
+ * Préstamo de un libro a un estudiante.
+ * Registra las fechas de préstamo y devolución y si ya fue devuelto.
+ */
 public class Prestamo {
     private int idPrestamo;
     private int idEstudiante;
