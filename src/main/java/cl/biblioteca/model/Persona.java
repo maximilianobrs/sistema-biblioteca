@@ -1,5 +1,9 @@
 package cl.biblioteca.model;
 
+/**
+ * Clase base abstracta para las personas del sistema.
+ * Es extendida por {@link Estudiante} y {@link Usuario}.
+ */
 public abstract class Persona {
     protected int id;
     protected String nombre;

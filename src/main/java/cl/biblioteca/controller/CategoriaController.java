@@ -10,6 +10,12 @@ public class CategoriaController {
 
     private CategoriaDAO categoriaDAO = new CategoriaDAOImpl();
 
+    /**
+     * Crea una categoría.
+     *
+     * @param nombreCategoria nombre
+     * @return true si se creó; false si los datos no son válidos o falló
+     */
     public boolean crear(String nombreCategoria){
         if (nombreCategoria.isEmpty()) {
             return false;
@@ -20,6 +26,13 @@ public class CategoriaController {
         return categoriaDAO.create(categoria);
     }
 
+    /**
+     * Actualiza el nombre de una categoría.
+     *
+     * @param idCategoria id de la categoría
+     * @param nombreCategoria nuevo nombre
+     * @return true si se actualizó
+     */
     public boolean actualizar(int idCategoria, String nombreCategoria){
         if (nombreCategoria.isEmpty()) {
             return false;
@@ -28,10 +41,21 @@ public class CategoriaController {
         return categoriaDAO.update(categoria);
     }
 
+    /**
+     * Elimina una categoría.
+     *
+     * @param idCategoria id de la categoría
+     * @return true si se eliminó
+     */
     public boolean eliminar(int idCategoria){
         return categoriaDAO.delete(idCategoria);
     }
 
+    /**
+     * Lista todas las categorías.
+     *
+     * @return lista de categorías
+     */
     public List<Categoria> listarTodo(){
         return categoriaDAO.readAll();
     }

@@ -104,7 +104,13 @@ public class VentanaLibro extends JPanel {
         String editorial = txtEditorial.getText().trim();
         String isbn = txtISBN.getText().trim();
 
+        if (titulo.isEmpty() || autor.isEmpty() || editorial.isEmpty() || isbn.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Completa título, autor, editorial e ISBN.");
+            return;
+        }
+
         int posicion = cmbCategoria.getSelectedIndex();
+
         if (posicion == -1) {
             JOptionPane.showMessageDialog(this, "Selecciona una categoría.");
             return;
@@ -114,6 +120,12 @@ public class VentanaLibro extends JPanel {
 
         try {
             int stock = Integer.parseInt(txtStock.getText().trim());
+
+            if (stock < 0) {
+                JOptionPane.showMessageDialog(this, "El stock no puede ser negativo.");
+                return;
+            }
+
             boolean guardado;
 
             if (idSeleccionado == 0) {

@@ -74,6 +74,16 @@ public class VentanaEstudiante extends JPanel {
         String curso = txtCurso.getText().trim();
         String correo = txtCorreo.getText().trim();
 
+        if (nombre.isEmpty() || rut.isEmpty() || curso.isEmpty() || correo.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Completa nombre, RUT, curso y correo.");
+            return;
+        }
+
+        if (!correo.contains("@")) {
+            JOptionPane.showMessageDialog(this, "El correo no es válido.");
+            return;
+        }
+
         try {
             boolean guardado;
 

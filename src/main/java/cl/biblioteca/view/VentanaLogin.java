@@ -33,7 +33,14 @@ public class VentanaLogin extends JDialog{
 
     private void ingresar() {
         try {
-            Usuario encontrado = usuarioController.login(txtCorreo.getText().trim());
+            String correo = txtCorreo.getText().trim();
+
+            if (correo.isEmpty() || !correo.contains("@")) {
+                JOptionPane.showMessageDialog(this, "Ingresa un correo válido.");
+                return;
+            }
+
+            Usuario encontrado = usuarioController.login(correo);
 
             if (encontrado == null) {
                 JOptionPane.showMessageDialog(this, "Correo no registrado.");

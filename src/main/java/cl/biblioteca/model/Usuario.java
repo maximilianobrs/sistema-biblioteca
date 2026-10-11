@@ -1,5 +1,9 @@
 package cl.biblioteca.model;
 
+/**
+ * Usuario del sistema (bibliotecario o administrador) que inicia sesión.
+ * Hereda los datos básicos de {@link Persona}.
+ */
 public class Usuario extends Persona{
     private String contrasena;
     private String rol;
@@ -26,6 +30,9 @@ public class Usuario extends Persona{
         this.rol = rol;
     }
 
+    /**
+     * @return nombre y rol del usuario
+     */
     @Override
     public String getDescripcion() {
         return "Usuario: " + nombre + " - Rol: " + rol;
