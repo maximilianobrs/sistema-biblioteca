@@ -19,7 +19,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             try {
                 VentanaLogin login = new VentanaLogin(usuarioController);
-                login.setVisible(true); // espera aquí hasta que se cierre el login
+                login.setVisible(true);
 
                 Usuario usuario = login.getUsuario();
                 if (usuario == null) {
