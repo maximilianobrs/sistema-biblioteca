@@ -9,7 +9,7 @@ public class ConexionDB {
     private static ConexionDB instanciaUnica;
     private Connection conexion;
 
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/speedfast_db";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/biblioteca";
     private static final String USER = "root";
     private static final String PASSWORD = "12345";
 
